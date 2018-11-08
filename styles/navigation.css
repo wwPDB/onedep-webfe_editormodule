@@ -1,0 +1,80 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.nav, .nav ul { 
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.nav {
+  font-family: Arial, Helvetica, sans-serif;
+  /** z-index and position settings necessary so that drop-down menus overlap main content on page **/
+  z-index: 100;
+  position: relative;
+}
+
+.nav ul {
+  /*** background: #565656; ***/
+  border-bottom: 1px solid #fff;
+  position: absolute;
+  display: none; /** allows the ul lists to be hidden when not moused over **/
+  top: 1em;
+  left: 0px;
+}
+
+.nav li:hover ul {
+  /** here is how the ul lists are displayed for "drop-down" effect **/
+  display: block;  
+  top: 31px;	
+}
+
+.nav li {
+  /**border-right: 1px solid #fff;**/
+  border: 1px solid #CCFFCC;
+  float: left;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.nav li a, .nav li a:link, .nav li a:active, .nav li a:visited {
+  font:  13px Verdana, Arial, Helvetica, sans-serif;
+  background: #696;
+  color: #fff;
+  display: block;
+  padding: 8px 12px;
+  text-decoration: none;
+}
+
+.nav li:hover a {
+  background: #666;
+  color: #fff;
+}
+
+.nav li:hover ul a {
+  background: #c1d6c1;
+  color: #000066;	
+}
+
+.nav li:hover ul a:hover{
+  background: #ccc;
+  color: #000;	
+}
+
+.nav ul li {
+  border: 0;
+  float: none;
+}
+.nav ul a {
+  border: 1px solid #fff;
+  border-bottom: 0;
+  padding-right: 20px;
+  width: 180px;
+  white-space: nowrap;
+}
+
+ul.nav li.topnav a.chosen {
+  color: yellow;
+  font-weight:bold;
+}

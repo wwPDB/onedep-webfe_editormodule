@@ -1,0 +1,98 @@
+@charset "utf-8";
+table.trnspsd_tbl td:first-child {
+	border-right: 1px solid black;
+    /*font-weight: bold;*/
+	font-size: 1.1em;
+	/*color: 	#FFFFFF;*/
+   /*background: #C1D6C1; /*#eeeeee; #669966; #e3f2e1; * /*/
+}
+table.trnspsd_tbl tr.odd td:first-child { background: #C1D6C1; }
+table.trnspsd_tbl tr.even td:first-child { background: #C1D6C1; }
+
+table.dataTable tbody td.prmry_key { border:solid 1px #AD22CA; }
+table.dataTable tbody .immutable { color: #4169E1; }
+table.dataTable tbody td.prmry_key .newrecord { border:solid 1px #AD22CA; background: #FFC;}
+table.dataTable tr.odd { background-color: #e3f2e1; }
+table.dataTable tbody .newrecord{background: #FFC;}
+table.dataTable tr.row_selected { background-color: #cbe6ef;}
+table.dataTable tbody tr.row_selected .prmry_key { background-color: #cbe6ef;}
+table.dataTable tr.row_selected .newrecord { background-color: #cbe6ef;}
+
+/***
+table.dataTable tr.even .favorite { background-color: #e3f2e1; }
+table.dataTable tr.odd .favorite { background-color: #e1e3f2; }
+// or
+table.dataTable tr.odd .favorite { background-color: #f1f9f0; }
+***/
+
+table.dataTable tr.odd td.sorting_1,
+table.dataTable tr.odd td.sorting_2,
+table.dataTable tr.odd td.sorting_3 { background-color: #e3f2e1; }
+
+table.dataTable tr.even td.sorting_1,
+table.dataTable tr.even td.sorting_2,
+table.dataTable tr.even td.sorting_3 { background-color: white; }
+
+table.dataTable tr.odd td.newrecord,
+table.dataTable tr.even td.newrecord { background-color: #ffffcc; }
+
+table.dataTable tr.row_selected td.newrecord { background-color: #cbe6ef; }
+
+table.dataTable tr.row_selected td.sorting_1,
+table.dataTable tr.row_selected td.sorting_2,
+table.dataTable tr.row_selected td.sorting_3,
+table.dataTable tr.row_selected td.sorting_1,
+table.dataTable tr.row_selected td.sorting_2,
+table.dataTable tr.row_selected td.sorting_3,
+table.dataTable tr.row_selected td.sorting_1.newrecord,
+table.dataTable tr.row_selected td.sorting_2.newrecord,
+table.dataTable tr.row_selected td.sorting_3.newrecord,
+table.dataTable tr.row_selected td.sorting_1.newrecord,
+table.dataTable tr.row_selected td.sorting_2.newrecord,
+table.dataTable tr.row_selected td.sorting_3.newrecord { background-color: #cbe6ef; }
+
+table.dataTable td.prmry_key.sorting_1.mndtry,
+table.dataTable td.prmry_key.sorting_2.mndtry,
+table.dataTable td.prmry_key.sorting_3.mndtry,
+table.dataTable td.prmry_key.sorting_1.mndtry,
+table.dataTable td.prmry_key.sorting_2.mndtry,
+table.dataTable td.prmry_key.sorting_3.mndtry { border:solid 1px #ff3300; }
+
+table.dataTable td.prmry_key.sorting_1.mndtry_missing,
+table.dataTable td.prmry_key.sorting_2.mndtry_missing,
+table.dataTable td.prmry_key.sorting_3.mndtry_missing,
+table.dataTable td.prmry_key.sorting_1.mndtry_missing,
+table.dataTable td.prmry_key.sorting_2.mndtry_missing,
+table.dataTable td.prmry_key.sorting_3.mndtry_missing {background: #ffcc00;}
+
+
+table.display tr.even td.cell_selected {
+    background-color: #B0BED9;
+}
+ 
+table.display tr.odd td.cell_selected {
+    background-color: #9FAFD1;
+}
+
+div.dataTables_paginate .paginate_active { background-color: #cae6c6; }
+
+div.dataTables_length,
+div.dataTables_filter,
+div.dataTables_paginate,
+div.dataTables_info {
+    padding: 6px;
+}
+div.dataTables_filter label{ display: inline;}
+div.dataTables_filter input{ display: inline;}
+div.dataTable_wrapper div.categorynamelabel{padding: 6px}
+
+table.cifdatatable.dataTable.DTTZ_Transposed th{ 
+	padding: 5px 8px;
+	border-right: 1px solid black;
+	font-weight: bold;
+}
+
+/** below settings found necessary to retain same look when updating to DataTables 1.10.5 from 1.9.0 **/
+table.dataTable tbody th, table.dataTable tbody td {padding: 3px 10px;}
+table.dataTable {border-spacing: 1px;}
+/** above settings found necessary when updating to DataTables 1.10.5 from 1.9.0 **/

@@ -1,0 +1,25 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* For Validation Flag Styling ----------------------*/
+.dict_violation{background: #ff6666;}
+.bndry_err{background: #ff6666;}
+.vldt_err{background: #ff6666;}
+.mndtry{ border:solid 1px #ff3300; }
+.mndtry_missing{background: #ffcc00;}
+
+/* For jQuery UI - modal dialog form styling --------------------*/
+label, input { display:block; }
+input.text { margin-bottom:12px; width:95%; padding: .4em; }
+fieldset { padding:0; border:0; margin-top:25px; }
+.topcaption { border: 1px solid transparent; padding: 0.3em; }
+.ui-dialog .ui-state-error { padding: .3em; }
+
+/* For help info styling --------------------*/
+span.smallbox.newrecord{background: #ffffcc;}
+span.smallbox.row_selected { background-color: #cbe6ef;}
+span.smallbox.prmry_key { border:solid 1px #AD22CA; }
+span.smallbox.immutable { color: #4169E1; }
+span.smallbox.mndtry{ border:solid 1px #ff3300; }
+span.smallbox.mndtry_missing{background: #ffcc00;}
+span.smallbox.dict_violation{background: #ff6666;}

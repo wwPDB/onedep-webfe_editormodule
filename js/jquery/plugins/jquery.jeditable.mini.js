@@ -1,0 +1,1 @@
+../plugins-src/jquery.jeditable-1.7.1.mini.js
