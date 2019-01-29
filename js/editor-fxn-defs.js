@@ -226,10 +226,15 @@ function setupCategoryDT(cifCtgry, htmlData, ctgry_dict, targetDivId) {
         var oTable;
         /***TRANSPOSE**/
         var sTrnsps = 'Z';
-        var sServerMethod = 'GET'; //20130517, had to use "GET" b/c currently using "POST" in context of simultaneous view of >1 datatable seemed to cause lag/column sizing/alignment issue.
-        if (cifCtgry == 'refine') {
+        /*
+	  var sServerMethod = 'GET'; //20130517, had to use "GET" b/c currently using "POST" in context of simultaneous view of >1 datatable seemed to cause lag/column sizing/alignment issue.
+          if (cifCtgry == 'refine') {
             sServerMethod = 'POST'; // seeing issues with 'GET' when number of data elements is large enough to exceed 'GET' method limits of supportable number of query parameters
-        }
+            }
+	*/
+	// Windows 10 is causing issues with too long uris.
+	// It is truncating requests in what it sends to server.
+	sServerMethod = 'POST';
 
         // Start of DataTble constructor
         oTable = $('#' + cifCtgry + '_tbl').dataTable({
