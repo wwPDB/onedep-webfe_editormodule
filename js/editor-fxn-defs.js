@@ -360,7 +360,7 @@ function setupCategoryDT(cifCtgry, htmlData, ctgry_dict, targetDivId) {
                     addOn = ' id="help_pdbx_display_view_item_info" title="title" ';
                 }
 
-                $('.categorynamelabel_' + cifCtgry).html('<h3>Category: <span ' + addOn + '><a href="http://mmcif.wwpdb.org/dictionaries/mmcif_pdbx_v5_next.dic/Categories/' + cifCtgry + '.html" target="_blank" >' + cifCtgry + '</a></span></h3>');
+                $('.categorynamelabel_' + cifCtgry).html('<h3>Category: <span ' + addOn + '><a href="https://mmcif.wwpdb.org/dictionaries/mmcif_pdbx_v5_next.dic/Categories/' + cifCtgry + '.html" target="_blank" >' + cifCtgry + '</a></span></h3>');
 
                 oTable.width("100%");
                 oTable.fnAdjustColumnSizing(); //SEEMS WE NEED TO DO THIS TO ENSURE THAT COLUMN HEADERS ALIGN PROPERLY WITH COLUMNS UNDERNEATH
