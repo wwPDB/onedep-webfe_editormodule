@@ -876,7 +876,7 @@ function initSkipCalcControls(btnId) {
 
     if (contextsRequiringSkipCalc.indexOf(EditorMod.context) >= 0) {
         $('#skip_btns_grp').show();
-        if (btnId == "struct_conn+struct_mon_prot_cis") {
+        if (btnId == "struct_conn+struct_mon_prot_cis+pdbx_modification_feature") {
             $('#skip_site').hide();
             $('#skip_solventpos').hide();
             $('.skip_scndry_strctr').hide();
