@@ -880,24 +880,28 @@ function initSkipCalcControls(btnId) {
             $('#skip_site').hide();
             $('#skip_solventpos').hide();
             $('.skip_scndry_strctr').hide();
-            checkSkipCalc('link');
-            $('#skip_link').show().button();
+            checkSkipCalc('linkdisulf');
+            // $('#skip_link').show().button();
+            $('#skip_linkdisulf').show().button();
             //$('#skip_btns_grp').html('<input id="skip" name="skip" value="skip" class="" type="button" style="margin-top: 8px; font-size: .8em;" />');
         } else if (btnId == "struct_site+struct_site_gen") {
-            $('#skip_link').hide();
+            //$('#skip_link').hide();
+            $('#skip_linkdisulf').hide();
             $('#skip_solventpos').hide();
             $('.skip_scndry_strctr').hide();
             checkSkipCalc('site');
             $('#skip_site').show().button();
             //$('#skip_btns_grp').html('<input id="skip" name="skip" value="skip" class="" type="button" style="margin-top: 8px; font-size: .8em;" />');
         } else if (btnId == "pdbx_distant_solvent_atoms+pdbx_solvent_atom_site_mapping") {
-            $('#skip_link').hide();
+            //$('#skip_link').hide();
+	    $('#skip_linkdisulf').hide();
             $('#skip_site').hide();
             $('.skip_scndry_strctr').hide();
             checkSkipCalc('solventpos');
             $('#skip_solventpos').show().button();
         } else if (btnId == "struct_sheet_order+struct_sheet+pdbx_struct_sheet_hbond+struct_sheet_range" || btnId == "struct_conf+struct_conf_type") {
-            $('#skip_link').hide();
+            // $('#skip_link').hide();
+            $('#skip_linkdisulf').hide();
             $('#skip_site').hide();
             $('#skip_solventpos').hide();
             checkSkipCalc('helix');
@@ -1898,6 +1902,8 @@ function skipCalc(task) {
                     sTask = 'Sheet';
                 } else if (task == 'solventpos') {
                     sTask = 'Solvent Reposition';
+                } else if (task == 'linkdisulf') {
+                    sTask = 'Links/Disulf';
                 }
 
                 $('#skip_' + task).val('Undo Skip ' + sTask + ' Calc');
@@ -1931,6 +1937,8 @@ function undoSkipCalc(task) {
                     sTask = 'Sheet';
                 } else if (task == 'solventpos') {
                     sTask = 'Solvent Reposition';
+                } else if (task == 'linkdisulf') {
+		    sTask = 'Links/Disulf';
                 }
 
                 $('#skip_' + task).val('Skip ' + sTask + ' Calc');
@@ -1963,6 +1971,8 @@ function checkSkipCalc(task) {
                 sTask = 'Sheet';
             } else if (task == 'solventpos') {
                 sTask = 'Solvent Reposition';
+            } else if (task == 'linkdisulf') {
+		    sTask = 'Links/Disulf';
             }
 
             if (jsonObj.status == "y") {
